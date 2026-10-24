@@ -1,0 +1,35 @@
+type User @table {
+  email: String!
+  name: String!
+  profileSummary: String
+}
+
+type Company @table {
+  name: String!
+  industry: String
+  websiteUrl: String
+}
+
+type JobPosting @table {
+  title: String!
+  status: String!
+  company: Company!
+  description: String
+  jobUrl: String
+  salaryRange: String
+  applicationDate: Date
+}
+
+type Contact @table {
+  name: String!
+  job: JobPosting!
+  email: String
+  phone: String
+  role: String
+}
+
+type ApplicationNote @table {
+  content: String!
+  job: JobPosting!
+  createdAt: Timestamp
+}

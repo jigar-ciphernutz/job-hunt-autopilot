@@ -1,0 +1,273 @@
+{
+  "emails": [
+    {
+      "id": 1,
+      "expectedCategory": "application_acknowledgment",
+      "expectedCompany": "Tata Digital",
+      "expectedRole": "Software Engineer",
+      "expectedIsScam": false,
+      "groupKey": "tata digital|software engineer",
+      "notes": "Groups with email 2 (same company/role); part of tatadigital-software-engineer app"
+    },
+    {
+      "id": 2,
+      "expectedCategory": "interview_invitation",
+      "expectedCompany": "Tata Digital",
+      "expectedRole": "Software Engineer",
+      "expectedIsScam": false,
+      "groupKey": "tata digital|software engineer",
+      "notes": "Groups with email 1. Latest response date 2026-10-18 → reminderDueAt 2026-10-25 → NOT overdue as of 2026-10-24"
+    },
+    {
+      "id": 3,
+      "expectedCategory": "scam",
+      "expectedCompany": "Infosys",
+      "expectedRole": "Associate Consultant",
+      "expectedIsScam": true,
+      "groupKey": null,
+      "notes": "Likely scam: fee request (₹4999 training fee), Aadhaar+PAN request, urgency, no interview, free-mail sender impersonating Infosys"
+    },
+    {
+      "id": 4,
+      "expectedCategory": "application_acknowledgment",
+      "expectedCompany": "Wipro",
+      "expectedRole": "Data Analyst",
+      "expectedIsScam": false,
+      "groupKey": "wipro|data analyst",
+      "notes": "Standalone acknowledgment dated 2026-10-10; reminderDueAt 2026-10-17; OVERDUE as of 2026-10-24"
+    },
+    {
+      "id": 5,
+      "expectedCategory": "other",
+      "expectedCompany": "FinEdge Capital",
+      "expectedRole": "Backend Developer",
+      "expectedIsScam": false,
+      "groupKey": null,
+      "notes": "Recruiter outreach from free-mail; no warning signs; must NOT be flagged. Category other or could be application_acknowledgment depending on interpretation."
+    },
+    {
+      "id": 6,
+      "expectedCategory": "rejection",
+      "expectedCompany": "Accenture",
+      "expectedRole": "Senior Developer",
+      "expectedIsScam": false,
+      "groupKey": "accenture|senior developer",
+      "notes": "Rejection email"
+    },
+    {
+      "id": 7,
+      "expectedCategory": "offer",
+      "expectedCompany": "Zomato",
+      "expectedRole": "Product Manager",
+      "expectedIsScam": false,
+      "groupKey": "zomato|product manager",
+      "notes": "Genuine offer from legitimate company"
+    },
+    {
+      "id": 8,
+      "expectedCategory": "scam",
+      "expectedCompany": null,
+      "expectedRole": null,
+      "expectedIsScam": true,
+      "groupKey": null,
+      "notes": "Scam: Joining Kit fee, OTP request, urgency. Does not use word 'fee' directly - uses 'Joining Kit'. Also 'Act now'."
+    },
+    {
+      "id": 9,
+      "expectedCategory": "other",
+      "expectedCompany": null,
+      "expectedRole": null,
+      "expectedIsScam": false,
+      "groupKey": null,
+      "notes": "Naukri job alert newsletter - category other"
+    },
+    {
+      "id": 10,
+      "expectedCategory": "application_acknowledgment",
+      "expectedCompany": "Meesho",
+      "expectedRole": null,
+      "expectedIsScam": false,
+      "groupKey": "meesho",
+      "notes": "Role-less acknowledgment. No role mentioned in email. Should create app with role null."
+    },
+    {
+      "id": 11,
+      "expectedCategory": "interview_invitation",
+      "expectedCompany": "Razorpay",
+      "expectedRole": "Software Engineer",
+      "expectedIsScam": false,
+      "groupKey": "razorpay|software engineer",
+      "notes": "Interview round 2 invitation"
+    },
+    {
+      "id": 12,
+      "expectedCategory": "scam",
+      "expectedCompany": null,
+      "expectedRole": null,
+      "expectedIsScam": true,
+      "groupKey": null,
+      "notes": "Scam: bank account + IFSC request, Aadhaar number request, urgency, no interview claim, free-mail sender impersonating Amazon"
+    },
+    {
+      "id": 13,
+      "expectedCategory": "rejection",
+      "expectedCompany": "BYJU'S",
+      "expectedRole": "Content Developer",
+      "expectedIsScam": false,
+      "groupKey": "byjus|content developer",
+      "notes": "Rejection from BYJU'S"
+    },
+    {
+      "id": 14,
+      "expectedCategory": "application_acknowledgment",
+      "expectedCompany": "Microsoft",
+      "expectedRole": "Software Engineer II",
+      "expectedIsScam": false,
+      "groupKey": "microsoft|software engineer ii",
+      "notes": "Acknowledgment from Microsoft"
+    },
+    {
+      "id": 15,
+      "expectedCategory": "interview_invitation",
+      "expectedCompany": "Swiggy",
+      "expectedRole": "Data Scientist",
+      "expectedIsScam": false,
+      "groupKey": "swiggy|data scientist",
+      "notes": "Assessment invitation counts as interview_invitation"
+    },
+    {
+      "id": 16,
+      "expectedCategory": "scam",
+      "expectedCompany": null,
+      "expectedRole": null,
+      "expectedIsScam": true,
+      "groupKey": null,
+      "notes": "Scam: processing fee Rs 299, urgency, no experience required, suspicious domain"
+    },
+    {
+      "id": 17,
+      "expectedCategory": "application_acknowledgment",
+      "expectedCompany": "Flipkart",
+      "expectedRole": "Business Analyst",
+      "expectedIsScam": false,
+      "groupKey": "flipkart|business analyst",
+      "notes": "Acknowledgment from Flipkart"
+    },
+    {
+      "id": 18,
+      "expectedCategory": "other",
+      "expectedCompany": null,
+      "expectedRole": null,
+      "expectedIsScam": false,
+      "groupKey": null,
+      "notes": "LinkedIn job alerts newsletter - category other"
+    },
+    {
+      "id": 19,
+      "expectedCategory": "rejection",
+      "expectedCompany": "Google",
+      "expectedRole": "Software Engineer",
+      "expectedIsScam": false,
+      "groupKey": "google|software engineer",
+      "notes": "Rejection from Google"
+    },
+    {
+      "id": 20,
+      "expectedCategory": "offer",
+      "expectedCompany": "CRED",
+      "expectedRole": "Senior Backend Engineer",
+      "expectedIsScam": false,
+      "groupKey": "cred|senior backend engineer",
+      "notes": "Genuine offer from CRED"
+    }
+  ],
+  "expectedApplications": [
+    {
+      "id": "tata digital|software engineer",
+      "company": "Tata Digital",
+      "role": "Software Engineer",
+      "stage": "interview",
+      "emailIds": [1, 2],
+      "isOverdueOn20261024": false
+    },
+    {
+      "id": "wipro|data analyst",
+      "company": "Wipro",
+      "role": "Data Analyst",
+      "stage": "applied",
+      "emailIds": [4],
+      "isOverdueOn20261024": true
+    },
+    {
+      "id": "accenture|senior developer",
+      "company": "Accenture",
+      "role": "Senior Developer",
+      "stage": "rejected",
+      "emailIds": [6]
+    },
+    {
+      "id": "zomato|product manager",
+      "company": "Zomato",
+      "role": "Product Manager",
+      "stage": "offer",
+      "emailIds": [7]
+    },
+    {
+      "id": "meesho",
+      "company": "Meesho",
+      "role": null,
+      "stage": "applied",
+      "emailIds": [10]
+    },
+    {
+      "id": "razorpay|software engineer",
+      "company": "Razorpay",
+      "role": "Software Engineer",
+      "stage": "interview",
+      "emailIds": [11]
+    },
+    {
+      "id": "byjus|content developer",
+      "company": "BYJU'S",
+      "role": "Content Developer",
+      "stage": "rejected",
+      "emailIds": [13]
+    },
+    {
+      "id": "microsoft|software engineer ii",
+      "company": "Microsoft",
+      "role": "Software Engineer II",
+      "stage": "applied",
+      "emailIds": [14]
+    },
+    {
+      "id": "swiggy|data scientist",
+      "company": "Swiggy",
+      "role": "Data Scientist",
+      "stage": "interview",
+      "emailIds": [15]
+    },
+    {
+      "id": "flipkart|business analyst",
+      "company": "Flipkart",
+      "role": "Business Analyst",
+      "stage": "applied",
+      "emailIds": [17]
+    },
+    {
+      "id": "google|software engineer",
+      "company": "Google",
+      "role": "Software Engineer",
+      "stage": "rejected",
+      "emailIds": [19]
+    },
+    {
+      "id": "cred|senior backend engineer",
+      "company": "CRED",
+      "role": "Senior Backend Engineer",
+      "stage": "offer",
+      "emailIds": [20]
+    }
+  ],
+  "scamEmailIds": [3, 8, 12, 16]
+}

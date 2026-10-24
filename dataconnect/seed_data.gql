@@ -1,0 +1,27 @@
+mutation SeedData @transaction {
+  user_insertMany(data: [
+    {id: "550e8400-e29b-41d4-a716-446655440001", name: "Alice Smith", email: "alice@example.com"},
+    {id: "550e8400-e29b-41d4-a716-446655440002", name: "Bob Jones", email: "bob@example.com"},
+    {id: "550e8400-e29b-41d4-a716-446655440003", name: "Charlie Brown", email: "charlie@example.com"}
+  ])
+  company_insertMany(data: [
+    {id: "660e8400-e29b-41d4-a716-446655440001", name: "Tech Corp", industry: "Technology"},
+    {id: "660e8400-e29b-41d4-a716-446655440002", name: "Design Studio", industry: "Design"},
+    {id: "660e8400-e29b-41d4-a716-446655440003", name: "Finance Plus", industry: "Finance"}
+  ])
+  jobPosting_insertMany(data: [
+    {id: "770e8400-e29b-41d4-a716-446655440001", title: "Software Engineer", status: "Open", companyId: "660e8400-e29b-41d4-a716-446655440001"},
+    {id: "770e8400-e29b-41d4-a716-446655440002", title: "UX Designer", status: "Open", companyId: "660e8400-e29b-41d4-a716-446655440002"},
+    {id: "770e8400-e29b-41d4-a716-446655440003", title: "Accountant", status: "Closed", companyId: "660e8400-e29b-41d4-a716-446655440003"}
+  ])
+  contact_insertMany(data: [
+    {id: "880e8400-e29b-41d4-a716-446655440001", name: "Recruiter One", jobId: "770e8400-e29b-41d4-a716-446655440001", email: "hr1@tech.com"},
+    {id: "880e8400-e29b-41d4-a716-446655440002", name: "Design Lead", jobId: "770e8400-e29b-41d4-a716-446655440002", email: "lead@design.com"},
+    {id: "880e8400-e29b-41d4-a716-446655440003", name: "Hiring Manager", jobId: "770e8400-e29b-41d4-a716-446655440003", email: "manager@finance.com"}
+  ])
+  applicationNote_insertMany(data: [
+    {id: "990e8400-e29b-41d4-a716-446655440001", content: "Great candidate for software role.", jobId: "770e8400-e29b-41d4-a716-446655440001"},
+    {id: "990e8400-e29b-41d4-a716-446655440002", content: "Portfolio needs more work.", jobId: "770e8400-e29b-41d4-a716-446655440002"},
+    {id: "990e8400-e29b-41d4-a716-446655440003", content: "Position filled.", jobId: "770e8400-e29b-41d4-a716-446655440003"}
+  ])
+}

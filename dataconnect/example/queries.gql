@@ -1,0 +1,119 @@
+mutation InsertUser($name: String!, $email: String!) @auth(level: USER) {
+  user_insert(data: {id_expr: "auth.uid", name: $name, email: $email})
+}
+
+mutation UpdateUser($name: String!) @auth(level: USER) {
+  user_update(key: {id_expr: "auth.uid"}, data: {name: $name})
+}
+
+mutation DeleteUser @auth(level: USER) {
+  user_delete(key: {id_expr: "auth.uid"})
+}
+
+query GetUser @auth(level: USER) {
+  user(key: {id_expr: "auth.uid"}) {
+    name email profileSummary
+  }
+}
+
+query ListUsers @auth(level: PUBLIC, insecureReason: "Public directory of company users") {
+  users {
+    name email
+  }
+}
+
+mutation CreateCompany($name: String!, $industry: String) @auth(level: USER) {
+  company_insert(data: {name: $name, industry: $industry})
+}
+
+mutation UpdateCompany($id: UUID!, $name: String) @auth(level: USER) {
+  company_update(id: $id, data: {name: $name})
+}
+
+mutation DeleteCompany($id: UUID!) @auth(level: USER) {
+  company_delete(id: $id)
+}
+
+query GetCompany($id: UUID!) @auth(level: PUBLIC, insecureReason: "Publicly visible company details") {
+  company(id: $id) {
+    name industry websiteUrl
+  }
+}
+
+query ListCompanies @auth(level: PUBLIC, insecureReason: "Public list of partner companies") {
+  companies {
+    name industry
+  }
+}
+
+mutation CreateJobPosting($title: String!, $status: String!, $companyId: UUID!) @auth(level: USER) {
+  jobPosting_insert(data: {title: $title, status: $status, companyId: $companyId})
+}
+
+mutation UpdateJobPosting($id: UUID!, $status: String) @auth(level: USER) {
+  jobPosting_update(id: $id, data: {status: $status})
+}
+
+mutation DeleteJobPosting($id: UUID!) @auth(level: USER) {
+  jobPosting_delete(id: $id)
+}
+
+query GetJobPosting($id: UUID!) @auth(level: PUBLIC, insecureReason: "Public job board listings") {
+  jobPosting(id: $id) {
+    title status salaryRange description
+  }
+}
+
+query ListJobPostings @auth(level: PUBLIC, insecureReason: "Public job board listings") {
+  jobPostings {
+    title status company { name }
+  }
+}
+
+mutation CreateContact($name: String!, $jobId: UUID!, $email: String) @auth(level: USER) {
+  contact_insert(data: {name: $name, jobId: $jobId, email: $email})
+}
+
+mutation UpdateContact($id: UUID!, $role: String) @auth(level: USER) {
+  contact_update(id: $id, data: {role: $role})
+}
+
+mutation DeleteContact($id: UUID!) @auth(level: USER) {
+  contact_delete(id: $id)
+}
+
+query GetContact($id: UUID!) @auth(level: USER) {
+  contact(id: $id) {
+    name email role
+  }
+}
+
+query ListContacts @auth(level: USER) {
+  contacts {
+    name role job { title }
+  }
+}
+
+mutation CreateApplicationNote($content: String!, $jobId: UUID!) @auth(level: USER) {
+  applicationNote_insert(data: {content: $content, jobId: $jobId, createdAt_expr: "request.time"})
+}
+
+mutation UpdateApplicationNote($id: UUID!, $content: String!) @auth(level: USER) {
+  applicationNote_update(id: $id, data: {content: $content})
+}
+
+mutation DeleteApplicationNote($id: UUID!) @auth(level: USER) {
+  applicationNote_delete(id: $id)
+}
+
+query GetApplicationNote($id: UUID!) @auth(level: USER) {
+  applicationNote(id: $id) {
+    content createdAt
+  }
+}
+
+query ListApplicationNotes @auth(level: USER) {
+  applicationNotes {
+    content job { title }
+  }
+}
